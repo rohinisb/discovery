@@ -15,10 +15,7 @@ From the root directory of this project run the below command to start the servi
 
 ```
 mvn spring-boot:run
-```
-
-I have 
-
+``` 
 
 #### Time Spent ####
 I spent about
