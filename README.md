@@ -23,8 +23,7 @@ I spent about
 * 90 mins on and off to think of the design
 * 60 mins coming up with the basic logic and setting up the project
 * 10 mins to understand the mock testing service
-* 20 mins to test the service
-* 90 mins to fix bugs, code formatting and documenting  
+* 110 mins to test, fix bugs, code formatting and documenting  
 
 Total of 4.5 hours.
 
