@@ -6,6 +6,7 @@ import com.exercise.discovery.bean.ServiceVO;
 import com.exercise.discovery.service.DiscoverService;
 import com.exercise.discovery.service.RegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -13,6 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@Validated
 public class DiscoveryController {
 
     @Autowired

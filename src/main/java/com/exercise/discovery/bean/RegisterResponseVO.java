@@ -1,28 +1,20 @@
 package com.exercise.discovery.bean;
 
-import com.exercise.discovery.constants.ServiceOperationType;
 import com.exercise.discovery.constants.RegisterStatus;
+import com.exercise.discovery.constants.ServiceOperationType;
 
 import java.io.Serializable;
 
 public class RegisterResponseVO implements Serializable {
 
-    private String serviceName;
     private ServiceOperationType operationType;
     private RegisterStatus registerStatus;
+    private String error;
 
-    public RegisterResponseVO(String serviceName, ServiceOperationType operationType, RegisterStatus registerStatus) {
-        this.serviceName = serviceName;
+    public RegisterResponseVO(ServiceOperationType operationType, RegisterStatus registerStatus, String error) {
         this.operationType = operationType;
         this.registerStatus = registerStatus;
-    }
-
-    public String getServiceName() {
-        return serviceName;
-    }
-
-    public void setServiceName(String serviceName) {
-        this.serviceName = serviceName;
+        this.error = error;
     }
 
     public ServiceOperationType getOperationType() {
@@ -39,5 +31,14 @@ public class RegisterResponseVO implements Serializable {
 
     public void setRegisterStatus(RegisterStatus registerStatus) {
         this.registerStatus = registerStatus;
+    }
+
+
+    public String getError() {
+        return error;
+    }
+
+    public void setError(String error) {
+        this.error = error;
     }
 }

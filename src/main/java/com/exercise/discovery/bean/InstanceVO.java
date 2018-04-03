@@ -4,7 +4,6 @@ import com.exercise.discovery.constants.InstanceHealth;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class InstanceVO {
-
     private String id;
     private int port;
     private InstanceHealth status;
@@ -51,5 +50,25 @@ public class InstanceVO {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        InstanceVO that = (InstanceVO) o;
+
+        if (port != that.port) return false;
+        if (!id.equals(that.id)) return false;
+        return serviceName.equals(that.serviceName);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id.hashCode();
+        result = 31 * result + port;
+        result = 31 * result + serviceName.hashCode();
+        return result;
     }
 }

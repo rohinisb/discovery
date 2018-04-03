@@ -1,5 +1,5 @@
 package com.exercise.discovery.constants;
 
 public enum RegisterStatus {
-    SUCCESS, FAILED
+    OK, ERROR, BAD_REQUEST
 }
